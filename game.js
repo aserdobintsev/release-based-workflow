@@ -91,13 +91,13 @@ var Starfield = function(speed,opacity,numStars,clear) {
   // If the clear option is set,
   // make the background black instead of transparent
   if(clear) {
-    starCtx.fillStyle = "#000";
+    starCtx.fillStyle = "#FFF";
     starCtx.fillRect(0,0,stars.width,stars.height);
   }
 
   // Now draw a bunch of random 2 pixel
   // rectangles onto the offscreen canvas
-  starCtx.fillStyle = "#FFF";
+  starCtx.fillStyle = "#000";
   starCtx.globalAlpha = opacity;
   for(var i=0;i<numStars;i++) {
     starCtx.fillRect(Math.floor(Math.random()*stars.width),
