@@ -10,7 +10,7 @@ var sprites = {
 };
 
 var enemies = {
-    starCtx.fillStyle = "#000";
+  straight: { x: 0,   y: -50, sprite: 'enemy_ship', health: 10,
               E: 100 },
   ltr:      { x: 0,   y: -100, sprite: 'enemy_purple', health: 10,
               B: 75, C: 1, E: 100, missiles: 2  },
@@ -97,7 +97,7 @@ var Starfield = function(speed,opacity,numStars,clear) {
 
   // Now draw a bunch of random 2 pixel
   // rectangles onto the offscreen canvas
-  starCtx.fillStyle = "#FFF";
+  starCtx.fillStyle = "#000";
   starCtx.globalAlpha = opacity;
   for(var i=0;i<numStars;i++) {
     starCtx.fillRect(Math.floor(Math.random()*stars.width),
